@@ -1,3 +1,4 @@
+use coord_2d::Size;
 use crate::app::App;
 
 mod app;
@@ -31,7 +32,8 @@ fn main() {
             resizable: false,
         }
     );
-    let app = App::new();
+    let screen_size = Size::new(40, 30);
+    let app = App::new(screen_size);
     context.run_app(app);
 }
 
