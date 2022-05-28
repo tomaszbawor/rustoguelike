@@ -1,12 +1,12 @@
-use coord_2d::Size;
-use crate::app::App;
+mod engine;
 
-mod app;
+use coord_2d::Size;
+use crate::engine::App;
 
 
 fn main() {
     use chargrid_graphical::{Config, Context, Dimensions, FontBytes};
-    const CELL_SIZE_PX: f64 = 24 as f64;
+    const CELL_SIZE_PX: f64 = 24f64;
 
     let context = Context::new(
         Config {
