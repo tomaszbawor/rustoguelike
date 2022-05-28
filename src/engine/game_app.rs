@@ -24,7 +24,10 @@ impl chargrid::app::App for App {
             Input::Keyboard(keys::ETX) | Input::Keyboard(keys::ESCAPE) => {
                 Some(chargrid::app::ControlFlow::Exit)
             }
-            _ => None,
+            other => {
+                self.data.handle_input(input);
+                None
+            }
         }
     }
 
